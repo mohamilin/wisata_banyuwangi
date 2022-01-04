@@ -23,6 +23,15 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.only(top: 16.0),
+            child: Text('Wisata Banyuwangi'),
+          )
+        ],
+      ),
+    );
   }
 }
