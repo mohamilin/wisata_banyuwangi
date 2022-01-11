@@ -64,7 +64,70 @@ samples, guidance on mobile development, and a full API reference.
             ),
         )
        ``` 
-      7. fd
-      8. f
-      9. fd
+
+      7. Selanjutnya, kita buat informasi terkait tempat wisata. Dengan menyusun widget secara vertikal dan horizontal. Dengan menambahkan child kedua dari column dr sebuah container.
+        ```dart
+        body: SafeArea(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                Container(....),
+                Container(
+                    margin: EdgeInsets.symmetric(vertical: 16.0),
+                    child: Row(
+                        children: <Widget>[
+                            // kode untuk bikin column
+                        ]
+                    )
+                )
+                )
+                ],
+            ),
+        )
+       ```  
+      8. Kemudian di dalam <Widget>[...] kita buat column utk disusun icon dan text. Kode untuk container yang ke dua
+         ```dart
+            Container(
+            margin: const EdgeInsets.symmetric(vertical: 16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Column(
+                  children: const <Widget>[
+                    Icon(Icons.calendar_today),
+                    SizedBox(height: 8.0),
+                    Text('Buka Setiap Hari')
+                  ],
+                ),
+                Column(
+                  children: const <Widget>[
+                    Icon(Icons.access_alarm),
+                    Text('09.00 - 18.00 WIB')
+                  ],
+                ),
+                Column(
+                  children: const <Widget>[
+                    Icon(Icons.money),
+                    Text('Rp 20,000')
+                  ],
+                )
+              ],
+            ),
+          ),
+         ``` 
+      9.  Kemudian, kita buat lagi untuk deskrips. Dengan menambahkan Container baru. 
+        ```dart
+        ...
+        Container(
+            padding: const EdgeInsets.all(16.0),
+            child: const Text(
+              'Berada di jalur utama Banyuwangi, Kabupaten Banyuwangi menjadi pilihan tepat sebagai  objek wisata yang tidak pernah sepi pengunjung. Selain karena letaknya strategis, kawasan ini juga menghadirkan nuansa wisata khas Eropa. Semua itu diterapkan dalam bentuk spot swafoto Instagramable.',
+              textAlign: TextAlign.justify,
+              style: TextStyle(fontSize: 15, fontStyle: FontStyle.normal),
+            ),
+          )
+        ....
+
+        ```
       10. fd
+      11. fd
